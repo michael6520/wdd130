@@ -28,37 +28,67 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     padding: 20px;
-    background-color: var(--primary-color);
 }
 
 p {
     padding: 25px;
 }
 
-nav {
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
-    display: flex;
-}
-
 nav a {
-    display: block;
-    color: var(--nav-link-color);
     text-decoration: none;
-    padding: 1rem;
 }
 
-nav a:link, nav a:visited {
-    color: var(--nav-link-color)
-}
-
-nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
+.hero {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .hero img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 40px;
+    display: block;
+    width: 100%;
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    height: 75px;
+    line-height: 75px;
+}
+
+.sociallinks img {
+    width: 35px;
+    height: auto;
+}
+
+.hero article {
+    position: absolute;
+    display: block;
+    width: 80%;
+    background-color: rgba(83, 104, 180, 0.7);
+    height: 150px;
+    color: white;
+    top: 200px;
+    left: 10%;
+}
+
+.hero p {
+    padding-top: 0;
+    padding-left: 15px;
+}
+
+.hero article img {
+    width: 200px;
+    height: auto;
+    float: right;
+    position: relative;
+    top: 8px;
+    right: 8px;
 }
