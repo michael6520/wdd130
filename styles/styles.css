@@ -5,18 +5,34 @@
 }
 
 nav {
+    display: flex;
     background-color: steelblue;
     padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
+    display: block;
+    text-decoration: none;
     color: white;
     display: block;
     padding: 20px;
 }
 
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 h1 {
     color: steelblue;
+    border-bottom: 2px solid steelblue;
+    max-width: 840px;
+    display: flex;
+    margin: 0 auto;
+    height: 50px;
+    align-items: center;
 }
 
 img {
@@ -31,31 +47,41 @@ p {
     padding: 0;
 }
 
-main {
-    max-width: 840px;
-}
-
 aside {
     width: 20rem;
-    text-align: center;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 aside h2 {
     position: absolute;
     top: 30px;
-    left: 133px;
+    left: 50%;
+    transform: translate(-50%, -0%);
 }
 
 aside img {
+    display: block;
     width: 200px;
     height: auto;
+}
+
+main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 1rem;
 }
 
 main img {
     width: 150px;
     height: auto;
     float: right;
+    margin: 10px;
 }
 
 footer {
@@ -72,4 +98,11 @@ footer {
     padding: 1rem;
     background-color: #eee;
     color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Defines two columns, one for aside and one for main */
+    align-items: start; /* Aligns items at the start of the grid */
+    gap: 20px; /* Adds some space between columns */
 }
