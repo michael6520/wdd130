@@ -4,7 +4,7 @@
     --primary-color: #B9D9EB;
     --secondary-color: #81613C;
     --accent1-color: #536878;
-    --accent2-color: #A3C1AD;
+    --accent2-color: #feffe7;
     
     --heading-font: 'poppins', san-serif;
     --paragraph-font: 'poppins', san-serif;
@@ -12,8 +12,14 @@
     --nav-background-color: #38324f;
     --nav-link-color: #b8b5d1;
     --nav-hover-link-color: #50a6d8;
-    --nav-hover-background-color: #435868;
+    --nav-hover-background-color: #5a6a75;
 }
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
 
 body {
     font-family: var(--paragraph-font);
@@ -27,15 +33,55 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
     padding: 20px;
+    background-color: var(--accent1-color);
+    margin-bottom: 10px;
 }
 
 p {
     padding: 25px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
+    color: #333;
+    background: var(--primary-color);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: var(--nav-hover-link-color);
+    background: var(--accent1-color);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    padding-bottom: 0;
+}
+
+figure img {
+    width: 112px;
+    height: 112px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+figcaption {
+    font-size: 11px;
+    text-align: center;
 }
 
 .hero {
@@ -63,14 +109,26 @@ nav a {
     line-height: 75px;
 }
 
+.sociallinks {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 100%;
+    gap: 3px;
+    display: flex;
+    align-items: center;
+}
+
 .sociallinks img {
+    position: relative;
     width: 35px;
     height: auto;
 }
 
 .hero article {
     position: absolute;
-    display: block;
+    display: flex;
+    align-items: center;
     width: 80%;
     background-color: rgba(83, 104, 180, 0.7);
     height: 150px;
@@ -79,16 +137,47 @@ nav a {
     left: 10%;
 }
 
-.hero p {
-    padding-top: 0;
-    padding-left: 15px;
+.hero article p {
+    padding: 10px;
+    font-size: 17px;
+    color: var(--accent2-color)
 }
 
 .hero article img {
     width: 200px;
     height: auto;
-    float: right;
+    padding: 8px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 5fr 2fr 5fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid img {
+    width: auto;
+    height: 200px;
+    grid-column: 2;
+}
+
+.grid p {
+    padding-top: 0
+}
+
+.flex {
+     display: flex;
+     align-items: start;
+}
+
+footer {
     position: relative;
-    top: 8px;
-    right: 8px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent1-color);
+}
+
+footer p {
+    margin: 0;
 }
